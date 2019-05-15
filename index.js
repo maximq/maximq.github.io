@@ -1,28 +1,50 @@
-var chatInterval = 6000 //Milliseconds per chat message
+var $messages = $('.messages-content'),
+    d, h, m,
+    i = 0;
 
-var chatName =  $('.chat-container .chat-item').first().find('.chat-sender').text();
-    $('.chat-loading em').text(chatName);
-function chatLoadingBlink (){
-  //$('.chat-loading').addClass('hide').delay(chatInterval - 2000).removeClass('hide');
-  
-  $('.chat-loading').addClass('hide');
-  setTimeout(function () { 
-      $('.chat-loading').removeClass('hide');
-  }, chatInterval - 2000);
+$(window).load(function() {
+  $messages.mCustomScrollbar();
+  setTimeout(function() {
+    fakeMessage();
+  }, 100);
+});
 
-  
+function updateScrollbar() {
+  $messages.mCustomScrollbar("update").mCustomScrollbar('scrollTo', 'bottom', {
+    scrollInertia: 10,
+    timeout: 0
+  });
 }
 
-function chatCycle(){
-    $('.chat-container .chat-item').first().slideUp(1500, function () {
-    $(this).appendTo($('.chat-container')); 
-    }).clone().insertAfter(".chat-item:last");
-  
-    var chatName =  $('.chat-container .chat-item').eq(1).find('.chat-sender').text();
-    $('.chat-loading em').text(chatName);
+function setDate(){
+  d = new Date()
+  if (m != d.getMinutes()) {
+    m = d.getMinutes();
+    $('<div class="timestamp">' + d.getHours() + ':' + m + '</div>').appendTo($('.message:last'));
+  }
 }
 
-setInterval(function(){ 
-  chatCycle();
-  chatLoadingBlink();
-}, chatInterval);
+function insertMessage() {
+  msg = $('.message-input').val();
+  if ($.trim(msg) == '') {
+    return false;
+  }
+  $('<div class="message message-personal">' + msg + '</div>').appendTo($('.mCSB_container')).addClass('new');
+  setDate();
+  $('.message-input').val(null);
+  updateScrollbar();
+  setTimeout(function() {
+    fakeMessage();
+  }, 1000 + (Math.random() * 20) * 100);
+}
+
+$('.message-submit').click(function() {
+  insertMessage();
+});
+
+$(window).on('keydown', function(e) {
+  if (e.which == 13) {
+    insertMessage();
+    return false;
+  }
+})
