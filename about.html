@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" >
+    <!--<link rel="stylesheet" type="text/css" media="max-device-width: 720px" href="mobile.css" />-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+    <meta charset="UTF-8">
+    <title>Maximq Digital</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon"/>
+    <script src="js/wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</head>
+<body>
+<div id="content">
+    <div id="header">
+        <div class="animated bounceInRight" id="contact"><img src="img/about.png" width="550vw" style="position: absolute; right: 200px; top: 120px;"></div>
+        <div class="animated bounceInLeft" style="position: absolute; right: 720px; top: 200px;"><h1 style="color: #ffffff"><p>Who i am?</p></h1></div>
+        <div id="menu"></div>
+        <div id="circle">
+        <svg>
+            <circle r="80" cx="100px" cy="100px" fill="white"/>
+            <div class="icon">
+                <div class="arrow"></div>
+            </div>
+            <script src="js/arrow.js"></script>
+        </svg>
+        </div>
+    </div>
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+    <div id="parent">
+        <div class="wow bounceBlockInUp">
+            <div class="wow fadeIn" align="center">
+                <h1 style="margin-top: 30px;"><p align="center"><br>Обо мне</p></h1>
+                <br>
+
+                <p>Я - студент Ижевского промышленно-экономического колледжа, учусь на специальности <br>
+                    "Обеспечение информационной безопасности автоматизированных систем". </p>
+                <br>
+                <div>
+                    <img style="height: 17vmin; position: absolute; left: 175px" src="img/python-logo.png">
+                <h3>HelloWorld.py</h3>
+                <p>Почему я выбрал python в качестве своего основного языка программирования? Всё просто:</p>
+                <ul style="text-align: left; padding-left: 400px">
+                    <li>Довольно лёгкий синтаксис – легко писать и легко читать</li>
+                    <li>Огромное количество справочников, документаций и поддержка обществом</li>
+                    <li>Писать можно хоть в блокноте (лично я пользуюсь продуктами компании JetBrains)</li>
+                    <li>Множество библиотек</li>
+                    <li>Python используют абсолютно все: Google, Yandex, Facebook, Microsoft, Reddit и многие другие.</li>
+                </ul>
+                </div>
+                <br>
+                <p style="text-align: left; padding-left: 400px">В 2019 году международная компания JetBrains провела опрос 7000 разработчиков, чтобы выяснить, чем сейчас живёт мир программирования. За последние 12 месяцев высокоуровневый язык Python использовала половина опрошенных (49%) и 9% остальных планируют освоить или начать активно пользоваться им.</p>
+                <br>
+                <div><img align="left" class="React-logo" src="img/logo.svg">
+                <h3 style="margin-right: 400px">ReactDOM.render()</h3>
+                <p style="text-align: left; padding-left: 400px">Детище Facebook’а я начал изучать относительно недавно. На этом сайте он используется в меню и в footer’е. Установка React’а в уже готовый проект займёт не более 1 минуты. Преимущества этой библиотеки:</p>
+                <ul style="text-align: left; padding-left: 400px">
+                    <li>Глядя на исходный код, можно сразу же представить, как ваш компонент будет отрисован, особенно при использовании JSX</li>
+                    <li>Популярность и поддержка обществом</li>
+                    <li>Документация на русском языке на официальном сайте</li>
+                    <li>Можно рендерить React на сервере</li>
+                </ul>
+                </div>
+                <br>
+                <h3>Index.html & style.css</h3>
+                <p style="text-align: left; padding-left: 400px">Изучение началось ещё в средней школе. В 9 классе я уже мог поставить
+                    Wordpress и отредактировать пару страниц темы. Этот сайт живёт уже <b id="days"></b> Первый коммит этого проекта на гитхаб был
+                    совершён 9 апреля 2019 года.</p>
+                <br>
+                <h3>Git init</h3>
+                <p style="text-align: left; padding-left: 400px">Когда-то мне надоело открывать браузер и вручную заливать проекты на гитхаб
+                    , мне хотелось коммитить из своей среды разработки
+                    (ну или хотя бы из консоли). При необходимости, я могу показать приватные репозитории на Github.</p>
+                <br>
+                <h3>SELECT * FROM …</h3>
+                <p style="text-align: left; padding-left: 400px">SQL мне понадобился в одном из личных проектов на Python для заказа
+                    такси через бота ВКонтакте. По идее, в базе хранилась сессия, пароль и бонусы клиента.</p>
+
+            </div>
+        </div>
+    </div>
+    <div id="clear"></div>
+    <div id="footer"></div>
+</div>
+
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+<script src="js/menu.js" type="text/babel"></script>
+<script src="js/footer.js" type="text/babel"></script>
+<script src="js/daysAlive.js" type="text/babel"></script>
+</body>
+</html>
